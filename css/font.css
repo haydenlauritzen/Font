@@ -1,6 +1,36 @@
 @font-face {
-    font-family: 'sans';
-    src: url('https://raw.githubusercontent.com/haydenlauritzen/haydenlauritzen.github.io/blob/main/Font/Uni_Sans_Heavy.otf');
-    font-weight: 100;
-    font-style: normal;
-} 
+    font-family: Uni Sans;
+    font-weight: bold;
+    src: url(./Uni_Sans_Heavy.otf);
+}
+
+:root {
+    --Font-Used: "Uni Sans Heavy CAPS", sans-serif;
+    --Font-Size: 15px;
+    /* medium|xx-small|x-small|small|large|x-large|xx-large|smaller|larger|length|initial|inherit; /
+    --Font-Variant: normal ;
+    / normal|small-caps|initial|inherit */
+}
+
+:not([class="hljs"]):not(code) {
+    font-family: var(--Font-Used) !important;
+    font-variant: var(--Font-Variant) !important;
+}
+
+.markup:not(code) {
+    font-size: var(--Font-Size) !important;
+}
+
+:root {
+    --Code-Font-Used: "Uni Sans";
+    --Code-Font-Size: 16px;
+    /* medium|xx-small|x-small|small|large|x-large|xx-large|smaller|larger|length|initial|inherit; /
+    --Code-Font-Variant: normal ;
+    / normal|small-caps|initial|inherit */
+}
+
+code {
+    font-family: var(--Code-Font-Used) !important;
+    font-size: var(--Code-Font-Size) !important;
+    font-variant: var(--Code-Font-Variant) !important;
+}
